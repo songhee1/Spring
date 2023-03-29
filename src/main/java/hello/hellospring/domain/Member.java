@@ -1,8 +1,11 @@
 package hello.hellospring.domain;
 
+import hello.hellospring.repository.MemoryMemberRepository;
+
 public class Member {
     private static Long id;
     private static String name;
+
 
     public static Long getId() {
         return id;
