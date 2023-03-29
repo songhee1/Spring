@@ -6,6 +6,7 @@ import hello.hellospring.repository.MemoryRepository;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 public class MemberService {
     private final MemoryRepository memberRepository= new MemoryMemberRepository();
@@ -31,5 +32,9 @@ public class MemberService {
 
     public List<Member> allMembers(){
         return memberRepository.findAll();
+    }
+
+    public Optional<Member> findOne(Long id){
+        return memberRepository.findId(id);
     }
 }
